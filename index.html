@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Gift</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffb199);
+            text-align: center;
+            color: white;
+            font-family: 'Georgia', serif;
+            overflow-y: auto;
+            position: relative;
+            height: 100vh;
+            animation: backgroundAnimation 10s infinite alternate ease-in-out;
+        }
+        @keyframes backgroundAnimation {
+            0% { background: linear-gradient(135deg, #ff758c, #ff7eb3, #ffb199); }
+            100% { background: linear-gradient(135deg, #ffb199, #ff7eb3, #ff758c); }
+        }
+        .container {
+            margin-top: 10%;
+            padding-bottom: 50px;
+        }
+        h1 {
+            font-size: 3.5em;
+            text-shadow: 3px 3px 8px black;
+        }
+        p {
+            font-size: 1.8em;
+            font-style: italic;
+            margin-top: -10px;
+        }
+        .btn {
+            font-size: 1.7em;
+            padding: 18px 35px;
+            border: none;
+            cursor: pointer;
+            margin: 20px;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+        }
+        .love-btn {
+            background-color: crimson;
+            color: white;
+        }
+        .music {
+            display: block;
+            margin: 20px auto;
+        }
+        img {
+            margin-top: 20px;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        @keyframes floatEffect {
+            0% { transform: translateY(0px); opacity: 1; }
+            50% { transform: translateY(-10px); opacity: 0.8; }
+            100% { transform: translateY(0px); opacity: 1; }
+        }
+        .floating {
+            position: absolute;
+            width: 40px;
+            opacity: 0.7;
+            animation: floatEffect 6s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>OE NICHA SUNU  TA KI XAI .........SOMETHING FOR U AMOUR  <u></u></h1>
+        <p>"DIVINE DIVINE DIVINE SAMJHI MADAMJI."</p>
+        <img src="C:\Users\Acer\Desktop\index\45.jpg" alt="Romantic Image">
+        <p>"OE PATA HE YEH DONO BACHE NA PASAND KARTE HAI EK DUSRE KO ."</p>
+        <img src="C:\Users\Acer\Desktop\index\444.jpg" alt="Romantic Image">
+        
+        <audio class="music" controls autoplay loop>
+            <source src="C:\Users\Acer\Desktop\index\ishq2.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        
+        <img src="C:\Users\Acer\Desktop\index\4456.jpg" alt="Romantic Image">
+        
+        <br>
+        <button class="btn love-btn" onclick="alert('🎁 A special gift just for you! 💖')">❤️</button>
+    </div>
+    <script>
+        function createFloatingElements() {
+            for (let i = 0; i < 15; i++) {
+                let floatElement = document.createElement("div");
+                floatElement.classList.add("floating");
+                floatElement.style.left = Math.random() * window.innerWidth + "px";
+                floatElement.style.top = Math.random() * window.innerHeight + "px";
+                floatElement.style.animationDuration = (Math.random() * 3 + 3) + "s";
+                floatElement.innerHTML = "💖";
+                document.body.appendChild(floatElement);
+            }
+        }
+        createFloatingElements();
+    </script>
+</body>
+</html>
